@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
+import { motion, useMotionTemplate, useMotionValue, Variants } from 'framer-motion';
 import { MouseEvent } from 'react';
 import Image from 'next/image';
 import { ArrowUpRight, Terminal, Mail, Sparkles } from 'lucide-react';
@@ -15,7 +15,7 @@ export default function Hero() {
     mouseY.set(clientY - top);
   }
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -23,7 +23,7 @@ export default function Hero() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
