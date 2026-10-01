@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { ExternalLink, ShieldCheck, GraduationCap, Building2, Sparkles, Code2, ArrowUpRight, Cpu } from 'lucide-react';
 
 export default function Projects() {
@@ -61,7 +61,7 @@ export default function Projects() {
     },
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -69,7 +69,7 @@ export default function Projects() {
     },
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, y: 40, scale: 0.96 },
     visible: {
       opacity: 1,
