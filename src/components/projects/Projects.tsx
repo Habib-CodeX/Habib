@@ -13,6 +13,7 @@ export default function Projects() {
         'High-performance passwordless facial authentication architecture engineered with TypeScript, React, and Next.js. Powered by advanced neural face-recognition engines (FaceCheck and Yandex AI integration), it features real-time liveness detection, high-frequency canvas scanning animations, and a secure PostgreSQL relational database backend managed via Prisma ORM for zero-latency credential verification.',
       tags: ['Next.js','TypeScript','Face-api.js','Node.js', 'React', 'Tailwind CSS', 'FaceCheck / Yandex AI', 'PostgreSQL', 'Motion', ],
       icon: ShieldCheck,
+      // Unique Alpha Security Styling (Amber / Gold Theme & Sharp Cyber Shape)
       shapeClass: 'rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-xl rounded-bl-xl',
       borderColor: 'group-hover:border-amber-400/90 border-slate-800/80',
       glowShadow: 'group-hover:shadow-[0_0_50px_rgba(251,191,36,0.3)]',
@@ -30,6 +31,7 @@ export default function Projects() {
         'An advanced AI-powered academic platform built with Next.js, TypeScript, and Tailwind CSS, backed by a secure Supabase SQL database. It features a custom routine generation API, automated Punjab Board syllabus integration, and a smart 3-step interactive wizard designed to generate personalized daily study plans with persistent real-time progress tracking.',
       tags: ['Next.js','Node.js', 'TypeScript', 'Tailwind CSS', 'Supabase SQL','AI Engine','Chatbot API','Testing System', 'Vercel'],
       icon: GraduationCap,
+      // Unique Study Planner Styling (Cyan / Electric Blue Theme & Rounded Organic Shape)
       shapeClass: 'rounded-tr-[4rem] rounded-bl-[4rem] rounded-tl-2xl rounded-br-2xl',
       borderColor: 'group-hover:border-cyan-400/90 border-slate-800/80',
       glowShadow: 'group-hover:shadow-[0_0_50px_rgba(34,211,238,0.3)]',
@@ -47,6 +49,7 @@ export default function Projects() {
         'Sophisticated spatial design and multi-story structural layout showcase platform. Powered by robust SQL database architecture, ultra-responsive spatial grids, GSAP motion, and high-end interactive client presentation suites. Designed specifically to exhibit elite fiber-composite doors, waterproof paneling, and custom interior solutions with seamless administrative control and live interactive customer support.',
       tags: ['Next.js', 'React', 'Tailwind CSS', 'GSAP Motion', 'UI Architecture', 'SQL Database'],
       icon: Building2,
+      // Unique Basra Interiors Styling (Emerald / Green Theme & Diagonal Cut Shape)
       shapeClass: 'rounded-l-[3.5rem] rounded-r-xl',
       borderColor: 'group-hover:border-emerald-400/90 border-slate-800/80',
       glowShadow: 'group-hover:shadow-[0_0_50px_rgba(52,211,153,0.3)]',
@@ -87,9 +90,13 @@ export default function Projects() {
         backgroundAttachment: 'fixed'
       }}
     >
+      
+      {/* Subtle Grid Lines Overlay */}
       <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
+        
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: -25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -111,6 +118,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
+        {/* Projects Cards Grid with Unique Custom Shapes & Colors */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -129,9 +137,11 @@ export default function Projects() {
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] as const }}
                 className={`group relative flex flex-col justify-between ${project.shapeClass} bg-slate-900/50 border ${project.borderColor} p-8 backdrop-blur-3xl transition-all duration-500 shadow-2xl ${project.glowShadow}`}
               >
+                {/* Dynamic Accent Top Line */}
                 <div className={`absolute top-0 left-10 right-14 h-[2px] bg-gradient-to-r ${project.accentGradient} opacity-70 group-hover:opacity-100 transition-opacity duration-500 rounded-full`} />
 
                 <div className="flex flex-col gap-6">
+                  {/* Top Bar with Icon & System ID */}
                   <div className="flex items-center justify-between">
                     <div className={`p-3.5 rounded-2xl bg-slate-950/80 border shadow-inner group-hover:scale-110 transition-all duration-300 ${project.iconBg}`}>
                       <Icon className="w-6 h-6" />
@@ -142,6 +152,7 @@ export default function Projects() {
                     </div>
                   </div>
 
+                  {/* Title & Badge */}
                   <div>
                     <span className={`inline-block px-3 py-1 rounded-md text-[11px] font-bold tracking-wide uppercase border ${project.badgeColor} mb-3`}>
                       {project.subtitle}
@@ -152,10 +163,12 @@ export default function Projects() {
                     </h3>
                   </div>
 
+                  {/* Description */}
                   <p className="text-slate-300 text-sm leading-relaxed font-normal tracking-wide">
                     {project.description}
                   </p>
 
+                  {/* Tech Stack Tags */}
                   <div className="flex flex-wrap gap-2 pt-2">
                     {project.tags.map((tag, idx) => (
                       <span
@@ -168,6 +181,7 @@ export default function Projects() {
                   </div>
                 </div>
 
+                {/* Bottom Action Bar */}
                 <div className="flex items-center justify-between pt-6 mt-8 border-t border-slate-800/80">
                   <a
                     href={project.liveLink}
