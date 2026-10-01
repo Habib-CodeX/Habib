@@ -3,6 +3,9 @@
 import { motion, Variants } from 'framer-motion';
 import { ExternalLink, ShieldCheck, GraduationCap, Building2, Sparkles, Code2, ArrowUpRight, Cpu } from 'lucide-react';
 
+// Fixed cubic-bezier easing type for Framer Motion
+const customEase: any = [0.16, 1, 0.3, 1];
+
 export default function Projects() {
   const projectsData = [
     {
@@ -75,7 +78,7 @@ export default function Projects() {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as any },
+      transition: { duration: 0.7, ease: customEase },
     },
   };
 
@@ -101,7 +104,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: -25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as any }}
+          transition={{ duration: 0.7, ease: customEase }}
           className="flex flex-col items-center text-center gap-5 mb-24"
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/60 border border-amber-500/30 text-amber-300 text-xs font-semibold tracking-widest uppercase backdrop-blur-xl shadow-xl">
@@ -134,7 +137,7 @@ export default function Projects() {
                 key={project.id}
                 variants={cardVariants}
                 whileHover={{ y: -8, scale: 1.01 }}
-                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] as any }}
+                transition={{ duration: 0.4, ease: customEase }}
                 className={`group relative flex flex-col justify-between ${project.shapeClass} bg-slate-900/50 border ${project.borderColor} p-8 backdrop-blur-3xl transition-all duration-500 shadow-2xl ${project.glowShadow}`}
               >
                 {/* Dynamic Accent Top Line */}
