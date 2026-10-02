@@ -3,7 +3,7 @@
 import { motion, useMotionTemplate, useMotionValue, Variants } from 'framer-motion';
 import { MouseEvent } from 'react';
 import Image from 'next/image';
-import { ArrowUpRight, Terminal, Mail, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Terminal, Mail, Sparkles, Download } from 'lucide-react';
 
 export default function Hero() {
   const mouseX = useMotionValue(0);
@@ -37,6 +37,20 @@ export default function Hero() {
       onMouseMove={handleMouseMove}
       className="relative min-h-screen flex items-center justify-center bg-[#03050a] text-white overflow-hidden px-6 py-20 select-none group"
     >
+      {/* Top Right Download Resume Button */}
+      <div className="absolute top-6 right-6 z-30">
+        <a
+          href="/HabibResume.pdf"
+          download="Habib-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/80 text-slate-200 hover:text-white hover:border-emerald-500/50 hover:bg-slate-800 text-xs font-medium backdrop-blur-md transition-all duration-300 shadow-lg"
+        >
+          <Download className="w-3.5 h-3.5 text-emerald-400" />
+          Download CV
+        </a>
+      </div>
+
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_75%_65%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
 
